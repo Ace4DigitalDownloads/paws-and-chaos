@@ -499,7 +499,7 @@ function setupLevel() {
   state = STATE.AIMING;
 
   // Cat start position
-  cat = new Cat(60, BASE_H - 180);
+  cat = new Cat(55, BASE_H - 240);
   cat.expression = 'calm';
 
   // Kitchen island (static)
@@ -896,8 +896,15 @@ function drawResult() {
   ctx.fillText('🔄  PLAY AGAIN', 0, 8);
   ctx.restore();
 
+  // Tap anywhere prompt - big and pulsing
+  const tapPulse = 0.7 + Math.sin(Date.now()/400)*0.3;
+  ctx.globalAlpha = tapPulse;
+  ctx.fillStyle='#ffffff'; ctx.font='bold 16px Arial';
+  ctx.fillText('TAP ANYWHERE TO PLAY AGAIN', BASE_W/2, BASE_H-50);
+  ctx.globalAlpha = 1;
+
   ctx.fillStyle='rgba(255,255,255,0.3)'; ctx.font='12px Arial';
-  ctx.fillText('© ACE Digital Global 2026 · MVP v0.1', BASE_W/2, BASE_H-15);
+  ctx.fillText('© ACE Digital Global 2026 · MVP v0.1', BASE_W/2, BASE_H-20);
   ctx.restore();
 }
 
@@ -940,8 +947,9 @@ function gameLoop(ts) {
             state=STATE.RESULT;
             resultTimer=0;
             if(score>highScore) highScore=score;
+            playWin();
           }
-        }, 2500);
+        }, 1200);
       }
     }
   }
