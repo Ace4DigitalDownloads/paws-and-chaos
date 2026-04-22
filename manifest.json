@@ -1,0 +1,49 @@
+{
+  "name": "Paws & Chaos",
+  "short_name": "Paws & Chaos",
+  "description": "A hybrid-casual physics game where you play as a cat causing satisfying chaos. Because cats have ZERO regrets.",
+  "start_url": "./paws-and-chaos.html",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#1a1a2e",
+  "theme_color": "#ff9500",
+  "lang": "en-US",
+  "categories": ["games", "entertainment"],
+  "developer": {
+    "name": "ACE Digital Global",
+    "url": "https://acedigitaldownloads.com"
+  },
+  "icons": [
+    {
+      "src": "./favicon.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Play Now",
+      "short_name": "Play",
+      "description": "Jump straight into the chaos",
+      "url": "./paws-and-chaos.html",
+      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": []
+}
